@@ -9,7 +9,7 @@ function appStart() {
     const div = document.createElement('div');
     div.innerText = '게임이 종료됐습니다.';
     div.style =
-      'display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:38%; background-color: white; width:200px; height:100px;';
+      'display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:38%; background-color: white; width:200px; height:100px; border: 1px solid black;';
     document.body.appendChild(div);
   };
 
@@ -35,19 +35,21 @@ function appStart() {
       const 정답_글자 = 정답[i];
 
       if (입력한_글자 === 정답_글자) {
+        block.style.background = '#6AAA64';
         맞은_갯수++;
-      }
+      } else if (정답.includes(입력한_글자)) {
+        block.style.background = '#C9B458';
+      } else block.style.background = '#787C7E';
+      block.style.color = 'white';
     }
 
     if (맞은_갯수 === 5) {
-      // 정답일 때 body에 정답 애니메이션 클래스 추가
       document.body.classList.add('correct-answer-animation');
       setTimeout(() => {
         document.body.classList.remove('correct-answer-animation');
         gameOver();
       }, 1000);
     } else {
-      // 오답일 때 body에 오답 애니메이션 클래스 추가
       document.body.classList.add('wrong-answer-animation');
       setTimeout(() => {
         document.body.classList.remove('wrong-answer-animation');
