@@ -4,6 +4,8 @@ main {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  font-size: large;
+  font-weight: bold;
 }
 
 .board-row {
@@ -13,11 +15,43 @@ main {
   gap: 5px;
 }
 
-.board-block {
+.board-column {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 3px solid #d3d6da;
   width: 60px;
   height: 60px;
+}
+
+@keyframes correctAnswerBackground {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #6aaa64;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes wrongAnswerBackground {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #c94444;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+body.correct-answer-animation {
+  animation: correctAnswerBackground 1s;
+}
+
+body.wrong-answer-animation {
+  animation: wrongAnswerBackground 1s;
 }

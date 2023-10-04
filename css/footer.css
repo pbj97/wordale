@@ -7,7 +7,7 @@ footer {
   margin-top: 20px;
 }
 
-.key-row {
+.keyboard-row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@ footer {
   margin: 3px;
 }
 
-.key-block {
+.keyboard-column {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ footer {
   background-color: #d3d6da;
 }
 
-.key-block__Big {
+.keyboard-column__Big {
   display: flex;
   justify-content: center;
   align-items: center;
