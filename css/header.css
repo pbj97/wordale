@@ -1,0 +1,27 @@
+header {
+  margin: 20px;
+  border-bottom: 1px solid #d8dbdf;
+}
+
+.title img {
+  width: 30px;
+  margin: 3px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.title-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-name {
+  font-size: 30px;
+  font-weight: bold;
+}
